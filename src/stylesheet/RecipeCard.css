@@ -12,3 +12,30 @@ img {
 .heart {
     width: 10px;
 }
+
+.recipe__text-container{
+    padding: 1em;
+    width: 250px;
+    word-wrap: break-word;
+}
+
+.recipe__meal-type{
+    font-size: 14px;
+    line-height: 9.93333px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    color: #b5460f;
+}
+
+.recipe__tittle{
+    font-size: 22px;
+    line-height: 26.4px;
+    letter-spacing: normal;
+    font-weight: 600;
+}
+
+.recipe__footer {
+    display: flex;
+    justify-content: space-between;
+}
