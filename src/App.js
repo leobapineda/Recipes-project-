@@ -75,7 +75,6 @@ export default function App() {
     </form>
     
     <div className="recipes__container" >
-        
         {map}
     </div> 
   

@@ -1,10 +1,19 @@
+body {
+    margin: 1em;
+    /* background-color: #f8f8f8; */
+    background-color: #F0F9F9;
+    
+}
+
 .recipe__container {
     /* border: 1px solid black; */
     font-family: 'Poppins', sans-serif;
     position: relative;
-    width: 13em;
+    /* width: 16em; */
+    width: 250px;
     margin: 1em 10px;
     background-color: white;
+    font-size: 0.9rem;
 }
 
 img {
@@ -29,12 +38,12 @@ img {
 }
 
 .recipe__tittle{
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 1.3em;
     letter-spacing: normal;
     font-weight: 600;
-    margin-top: 0.3em;
-    margin-bottom: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1.2em;
 }
 
 .recipe__footer {
@@ -55,4 +64,5 @@ img.heart-icon{
     bottom: 0.5em;
     position: absolute;
     right: 0.5em;
+    cursor: pointer;
 }
