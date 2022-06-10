@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import Recipe from "./components/RecipeCard";
 import './App.css'
+import Header from "./components/Header";
 
 export default function App() {
 
@@ -60,7 +61,7 @@ export default function App() {
 
   return (
     <>
-
+    <Header />
     <form onSubmit={hanbleSubmit} >
       <label id="food" >Choose food</label>
       <input type='text'
