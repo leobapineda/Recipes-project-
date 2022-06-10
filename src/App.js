@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import Recipe from "./components/Recipe";
+import Recipe from "./components/RecipeCard";
 import './App.css'
 
 export default function App() {
@@ -8,7 +8,6 @@ export default function App() {
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
 
-  // the initial value of photos has to be something, otherwise the first render will throw and error because it is trying to use map on an undefined element
   const [recipeName, setRecipeName] = useState(null);
   const [food, setFood] = useState('')
   const [submit, setSubmit] = useState('')
@@ -20,7 +19,6 @@ export default function App() {
 
  useEffect(() => {
   axios.get(`${url3}`)
-  // .then(res => res.json())
   .then(APIdata => {
     setRecipeName(APIdata.data.hits)
     console.log(APIdata.data)
@@ -62,6 +60,7 @@ export default function App() {
 
   return (
     <>
+
     <form onSubmit={hanbleSubmit} >
       <label id="food" >Choose food</label>
       <input type='text'
@@ -74,9 +73,12 @@ export default function App() {
       />
 <button>Search</button>
     </form>
+    
     <div>
-        {map}
-    </div>
+        <Recipe />
+    </div> 
+  
+
     </>
   );
 }

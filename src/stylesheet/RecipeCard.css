@@ -1,0 +1,12 @@
+.recipe__container {
+    border: 1px solid black;
+    display: inline-block;
+}
+
+img {
+    width: 250px;
+}
+
+.heart {
+    width: 10px;
+}
