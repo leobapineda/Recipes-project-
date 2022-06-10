@@ -1,22 +1,23 @@
 .recipe__container {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-family: 'Poppins', sans-serif;
     position: relative;
-    width: 15em;
+    width: 13em;
+    margin: 1em 10px;
+    background-color: white;
 }
 
 img {
     width: 100%;
 }
 
-img.heart-icon{
-    width: 2em;
-    position: relative;
-    bottom: 0.1em;
-}
 
 .recipe__text-container{
     padding: 0 1em 0.3em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
 }
 
 .recipe__meal-type{
@@ -33,12 +34,25 @@ img.heart-icon{
     letter-spacing: normal;
     font-weight: 600;
     margin-top: 0.3em;
+    margin-bottom: 1.5em;
 }
 
 .recipe__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 0.8em;
+    font-size: 0.7em;
+}
+
+.recipe__cuisine-type{
+    position: absolute;
+    bottom: 0.5em;
+    left: 0.5em;
     color: #555;
+    text-transform: uppercase;
+}
+
+
+img.heart-icon{
+    width: 2em;
+    bottom: 0.5em;
+    position: absolute;
+    right: 0.5em;
 }

@@ -4,4 +4,12 @@
 
 body {
     margin: 1em;
+    background-color: #d3d3d3;
+}
+
+.recipes__container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
