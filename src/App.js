@@ -76,6 +76,7 @@ export default function App() {
     
     <div>
         <Recipe />
+        {/* {map} */}
     </div> 
   
 

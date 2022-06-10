@@ -1,6 +1,8 @@
 .recipe__container {
     border: 1px solid black;
     display: inline-block;
+    /* font-family: Roboto, Arial, sans-serif;; */
+    font-family: 'Poppins', sans-serif;
 }
 
 img {
