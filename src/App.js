@@ -38,13 +38,20 @@ export default function App() {
     
 
    return(
-      <div key={item.recipe.image} >
-        <div>{item.recipe.label}</div>
-        <img src={item.recipe.image}/>
-        <ul>
-          {recipeItem}
-        </ul>
-      </div>
+      // <div key={item.recipe.image} >
+      <Recipe key={item.recipe.image}
+        img = {item.recipe.image}
+        title = {item.recipe.label}
+        mealType = {item.recipe.mealType[0]}
+        cuisineType = {item.recipe.cuisineType[0]}
+        />
+
+      //   <div>{item.recipe.label}</div>
+      //   <img src={item.recipe.image}/>
+      //   <ul>
+      //     {recipeItem}
+      //   </ul>
+      // </div>
    )
  })
 
@@ -75,8 +82,8 @@ export default function App() {
     </form>
     
     <div>
-        <Recipe />
-        {/* {map} */}
+        
+        {map}
     </div> 
   
 

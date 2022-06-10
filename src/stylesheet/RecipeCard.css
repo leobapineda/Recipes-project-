@@ -1,27 +1,26 @@
 .recipe__container {
     border: 1px solid black;
-    display: inline-block;
-    /* font-family: Roboto, Arial, sans-serif;; */
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 15em;
 }
 
 img {
-    width: 250px;
+    width: 100%;
 }
 
-.heart {
-    width: 10px;
+img.heart-icon{
+    width: 2em;
+    position: relative;
+    bottom: 0.1em;
 }
 
 .recipe__text-container{
-    padding: 1em;
-    width: 250px;
-    word-wrap: break-word;
+    padding: 0 1em 0.3em 1em;
 }
 
 .recipe__meal-type{
-    font-size: 14px;
-    line-height: 9.93333px;
+    font-size: 0.7em;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2.2px;
@@ -29,13 +28,17 @@ img {
 }
 
 .recipe__tittle{
-    font-size: 22px;
-    line-height: 26.4px;
+    font-size: 1.4em;
+    line-height: 1.3em;
     letter-spacing: normal;
     font-weight: 600;
+    margin-top: 0.3em;
 }
 
 .recipe__footer {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    font-size: 0.8em;
+    color: #555;
 }
