@@ -5,6 +5,11 @@ import axios from "axios";
 import Recipe from "./components/RecipeCard";
 import './App.css'
 import Header from "./components/Header";
+// PAGES
+import Favorites from "./Pages/Favorites";
+import About from "./Pages/About";
+import Pricing from "./Pages/Pricing";
+
 
 export default function App() {
 
@@ -58,12 +63,35 @@ export default function App() {
   function hanbleSubmit(e) {
     e.preventDefault()
     setSubmit(food)
-    console.log('submit');
+    // console.log('submit');
+  }
+
+  let component;
+  console.log(window.location.pathname);
+  switch(window.location.pathname) {
+    case '/':
+      // this is just an example
+      component = <Pricing />
+    break
+    case '/Pages/Favorites':
+      component = <Favorites />
+
+    break
+    case '/Pages/About':
+      component = <About />
+
+    break
+    case '/Pages/Pricing':
+      component = <Pricing />
+
+    break
   }
 
   return (
     <>
     <Header />
+    {component}
+    <h1>I am App page</h1>
     <form onSubmit={hanbleSubmit} >
       <label id="food" >Choose food</label>
       <input type='text'
@@ -78,7 +106,7 @@ export default function App() {
     </form>
     
     <div className="recipes__container" >
-        {map}
+        {/* {map} */}
     </div> 
   
 
