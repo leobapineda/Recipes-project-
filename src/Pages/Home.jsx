@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import Recipe from "../components/RecipeCard";
 
 function Home() {
@@ -11,7 +11,6 @@ function Home() {
   const [recipeName, setRecipeName] = useState(null);
   const [food, setFood] = useState('')
   const [submit, setSubmit] = useState('')
-  const [generateKey, setGenerateKey] = useState(1)
 
   const url2 = "/api/recipes/v2?type=public&q=chicken&app_id=1225815e&app_key=e642963f4d2299d6ac085245011970ab&diet=balanced&random=false"
 
@@ -59,7 +58,7 @@ function Home() {
   }
   return (
     <>
-    <Header />
+    <Navbar />
     <h1>I am App page</h1>
     <form onSubmit={hanbleSubmit} >
       <label id="food" >Choose food</label>
@@ -77,8 +76,6 @@ function Home() {
     <div className="recipes__container" >
         {map}
     </div> 
-  
-
     </>
   )
 }
