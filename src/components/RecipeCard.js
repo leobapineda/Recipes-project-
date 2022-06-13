@@ -1,10 +1,8 @@
-// rafce
-
 import { React, useEffect, useState } from "react";
 import "../stylesheet/RecipeCard.css";
 import heart from "../images/heart-regular.svg";
 import heart2 from "../images/heart-solid.svg";
-import image from  '../images/placeholder-600x600.png'
+import Favorites from "../Pages/Favorites";
 
 export default function Recipe({ img, title, mealType, cuisineType }) {
 
@@ -31,3 +29,7 @@ export default function Recipe({ img, title, mealType, cuisineType }) {
     </article>
   );
 }
+// necesito enviar el valor del elemento desde aqui hasta otra pagina.
+// pasar un valor de un objeto a otro pagina
+// pasar props desde un elemento hasta otro elemento
+// pasar y usar props de un elemento a otro elemento
