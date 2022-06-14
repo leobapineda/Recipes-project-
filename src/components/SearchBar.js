@@ -12,7 +12,7 @@ function SearchBar({ hanbleSubmit, handleChange, food }) {
       <input
         type="text"
         name="food input"
-        placeholder="Find a recipe"
+        placeholder="Find a recipe..."
         className="search__input"
         onChange={handleChange}
         defaultValue={food}

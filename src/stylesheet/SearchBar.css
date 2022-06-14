@@ -25,6 +25,8 @@
 
 .search__btn img {
   width: 15px;
+  position: relative;
+  bottom: -2px;
 }
 
 .search__input {
