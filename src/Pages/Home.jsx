@@ -1,19 +1,15 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import Navbar from "../components/Navbar";
 import Recipe from "../components/RecipeCard";
+import SearchBar from "../components/SearchBar";
 
 function Home() {
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
-
-  const [recipeName, setRecipeName] = useState(null);
+  
   const [food, setFood] = useState("");
+  const [recipeName, setRecipeName] = useState(null);
   const [submit, setSubmit] = useState("");
-
-  const url2 =
-    "/api/recipes/v2?type=public&q=chicken&app_id=1225815e&app_key=e642963f4d2299d6ac085245011970ab&diet=balanced&random=false";
-
   const url3 = `https://api.edamam.com/api/recipes/v2?type=public&q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&diet=balanced&random=false`;
 
   useEffect(() => {
@@ -24,8 +20,6 @@ function Home() {
   }, [submit]);
 
   let map = recipeName?.map((item) => {
-    //  console.log(item.recipe.mealType);
-
     let recipeItem = item.recipe.ingredients.map((element) => {
       return (
         // <li key={element.text} >{element.text}</li>
@@ -51,31 +45,16 @@ function Home() {
   function hanbleSubmit(e) {
     e.preventDefault();
     setSubmit(food);
-    // console.log('submit');
   }
   return (
     <>
-      <Navbar 
-      
-      
+      <SearchBar
+        hanbleSubmit={hanbleSubmit}
+        handleChange={handleChange}
+        food={food}
       />
-      <h1>I am App page</h1>
-      <form onSubmit={hanbleSubmit}>
-        <label id="food">Choose food</label>
-        <input
-          type="text"
-          name="food input"
-          placeholder="Find a recipe"
-          className="form--input"
-          onChange={handleChange}
-          defaultValue={food}
-        />
-        <button>Search</button>
-      </form>
 
-      <div className="recipes__container">
-        {map}
-      </div>
+      <div className="recipes__container">{map}</div>
     </>
   );
 }
