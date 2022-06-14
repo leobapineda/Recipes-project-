@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import Recipe from "../components/RecipeCard";
+import Recipe from "../components/RecipesList";
 // import heart from "../images/heart-regular.svg";
 // import heart2 from "../images/heart-solid.svg";
 // { img, title, mealType, cuisineType }

@@ -5,6 +5,13 @@ body {
     
 }
 
+.recipes-global__container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .recipe__container {
     border: 1px solid black;
     font-family: 'Poppins', sans-serif;
