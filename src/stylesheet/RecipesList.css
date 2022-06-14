@@ -38,7 +38,6 @@ img {
     width: 100%;
 }
 
-
 .recipe__text-container{
     padding: 0 1em 0.3em 1em;
     display: flex;
@@ -60,7 +59,6 @@ img {
     letter-spacing: normal;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 1.2em;
 }
 
 .recipe__footer {
@@ -68,18 +66,11 @@ img {
 }
 
 .recipe__cuisine-type{
-    position: absolute;
-    bottom: 0.5em;
     left: 1.5em;
     color: #555;
     text-transform: uppercase;
-}
-
-
-img.heart-icon{
-    width: 2em;
-    bottom: 0.5em;
     position: absolute;
-    right: 0.5em;
-    cursor: pointer;
+    bottom: 5px;
 }
+
+
