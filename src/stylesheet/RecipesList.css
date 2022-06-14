@@ -1,3 +1,8 @@
+:root{
+    --yellow: #fec445;
+    --red: #fe2c55;
+}
+
 body {
     margin: 1em;
     /* background-color: #f8f8f8; */
@@ -26,7 +31,7 @@ body {
 
 .recipe__container:hover {
     transform: translate(-2px,-2px);
-    box-shadow: 5px 5px 0 #fec445;
+    box-shadow: 5px 5px 0 var(--yellow);
 }
 
 img {

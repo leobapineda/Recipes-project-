@@ -1,18 +1,22 @@
 import React from "react";
+import "../stylesheet/SearchBar.css";
+import lupa from "../images/icons/lupa.svg";
 
 function SearchBar({ hanbleSubmit, handleChange, food }) {
   return (
-    <form onSubmit={hanbleSubmit}>
-      <label id="food">Choose food</label>
+    <form className="searh__container" onSubmit={hanbleSubmit}>
+      {/* <label id="food">Choose food</label> */}
+      <button className="search__btn">
+        <img src={lupa} />
+      </button>
       <input
         type="text"
         name="food input"
         placeholder="Find a recipe"
-        className="form--input"
+        className="search__input"
         onChange={handleChange}
         defaultValue={food}
       />
-      <button>Search</button>
     </form>
   );
 }

@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import Recipe from "../components/RecipesList";
+import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
 
 function Home() {
@@ -8,13 +8,13 @@ function Home() {
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
 
   const [food, setFood] = useState("");
-  const [recipeName, setRecipeName] = useState(null);
+  const [recipeData, setRecipeData] = useState(null);
   const [submit, setSubmit] = useState("");
   const url3 = `https://api.edamam.com/api/recipes/v2?type=public&q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&diet=balanced&random=false`;
 
   useEffect(() => {
     axios.get(`${url3}`).then((APIdata) => {
-      setRecipeName(APIdata.data.hits);
+      setRecipeData(APIdata.data.hits);
     });
   }, [submit]);
 
@@ -33,7 +33,7 @@ function Home() {
         handleChange={handleChange}
         food={food}
       />
-      <Recipe data={recipeName} />
+      <RecipeList data={recipeData} />
     </>
   );
 }
