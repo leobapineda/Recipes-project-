@@ -55,7 +55,10 @@ function Home() {
   }
   return (
     <>
-      <Navbar />
+      <Navbar 
+      
+      
+      />
       <h1>I am App page</h1>
       <form onSubmit={hanbleSubmit}>
         <label id="food">Choose food</label>
@@ -70,7 +73,9 @@ function Home() {
         <button>Search</button>
       </form>
 
-      <div className="recipes__container">{map}</div>
+      <div className="recipes__container">
+        {map}
+      </div>
     </>
   );
 }
