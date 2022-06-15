@@ -6,6 +6,7 @@ import HeaderTest from "../components/HeaderTest";
 import AddFavouritesTest from "../components/AddFavouritesTest";
 import Favorites from "./Favorites";
 import RemoveFavouritesTest from "../components/RemoveFavouritesTest";
+import Header from "../components/Header";
 
 function Home() {
   const YOUR_APP_ID = "1225815e";
@@ -65,7 +66,7 @@ function Home() {
 
   return (
     <>
-      <HeaderTest headingText="Linguini" />
+      {/* <HeaderTest headingText="Linguini" /> */}
       <SearchBar
         hanbleSubmit={hanbleSubmit}
         handleChange={handleChange}
