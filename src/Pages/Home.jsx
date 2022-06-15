@@ -2,11 +2,8 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
-import HeaderTest from "../components/HeaderTest";
 import AddFavouritesTest from "../components/AddFavouritesTest";
-import Favorites from "./Favorites";
-import RemoveFavouritesTest from "../components/RemoveFavouritesTest";
-import Header from "../components/Header";
+
 
 function Home() {
   const YOUR_APP_ID = "1225815e";
@@ -34,34 +31,33 @@ function Home() {
     setSubmit(food);
   }
 
-
-
   function addFavouriteFunc(recipe) {
-    const newFavourites = [...addFavourite, recipe]
-    setAddFavourite(newFavourites)
-    saveToLocalStorage(newFavourites)
+    const newFavourites = [...addFavourite, recipe];
+    setAddFavourite(newFavourites);
+    saveToLocalStorage(newFavourites);
   }
-  
+
   useEffect(() => {
     const movieFavourites = JSON.parse(
-      localStorage.getItem('react-recipe-favourites')
-    )
-    setAddFavourite(movieFavourites)
-  }, [])
+      localStorage.getItem("react-recipe-favourites")
+    );
+    setAddFavourite(movieFavourites);
+  }, []);
 
   function saveToLocalStorage(favouritesList) {
-    localStorage.setItem('react-recipe-favourites', JSON.stringify(favouritesList))
+    localStorage.setItem(
+      "react-recipe-favourites",
+      JSON.stringify(favouritesList)
+    );
   }
 
   function removeFavouriteFunc(recipe) {
     console.log(recipe);
     const newFavourites = addFavourite.filter((recipeItem) => {
-      return(
-        recipeItem.recipe.label != recipe.recipe.label
-      )
-    })
-    setAddFavourite(newFavourites)
-    saveToLocalStorage(newFavourites)
+      return recipeItem.recipe.label != recipe.recipe.label;
+    });
+    setAddFavourite(newFavourites);
+    saveToLocalStorage(newFavourites);
   }
 
   return (

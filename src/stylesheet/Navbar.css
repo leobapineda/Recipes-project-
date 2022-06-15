@@ -1,31 +1,42 @@
 nav{
-    background-color: rgb(255, 188, 188);
+   background-color: black;
+   color: white;
 }
 
-.ul {
+.nav__ul {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: 0;
+    margin-bottom: 1rem;
 }
 
-.ul li {
-    margin: 0 3rem;
+
+.nav__ul li {
     list-style: none;
-}
-
-.ul li.active {
-    background-color: #ddd;    
-}
-
-.ul li:hover {
-    background-color: #777;
-}
-
-.ul li a{
-    text-decoration: none;
 }
 
 hr {
     width: 15px;
     margin: 0.2em 0;
-    border: 1px solid black;
+    border: 1px solid white;
+}
+
+.nav__logo{
+    font-family: 'Tai Heritage Pro', serif;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav__favorites {
+    text-decoration: none;
+    color: white;
+    font-family: futura-pt, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    line-height: 11.9833px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 12px
 
 }

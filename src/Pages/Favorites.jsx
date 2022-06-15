@@ -27,6 +27,7 @@ function Favorites() {
     );
   }
 
+
   return (
     <>
       <RecipesList
