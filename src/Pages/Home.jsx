@@ -21,7 +21,6 @@ function Home() {
   useEffect(() => {
     axios.get(`${url3}`).then((APIdata) => {
       setRecipeData(APIdata.data.hits);
-      console.log(APIdata.data.hits);
     });
   }, [submit]);
 
@@ -34,17 +33,26 @@ function Home() {
     setSubmit(food);
   }
 
+
+
   function addFavouriteFunc(recipe) {
-    setAddFavourite((prevAddFavouriteFunc) => [
-      ...prevAddFavouriteFunc,
-      recipe,
-    ]);
+    const newFavourites = [...addFavourite, recipe]
+    setAddFavourite(newFavourites)
+    saveToLocalStorage(newFavourites)
   }
-  // const [addFavourite, setAddFavourite] = useState([]);
+  
+  useEffect(() => {
+    const movieFavourites = JSON.parse(
+      localStorage.getItem('react-recipe-favourites')
+    )
+    setAddFavourite(movieFavourites)
+  }, [])
+
+  function saveToLocalStorage(favouritesList) {
+    localStorage.setItem('react-recipe-favourites', JSON.stringify(favouritesList))
+  }
 
   function removeFavouriteFunc(recipe) {
-    // pasar por todos los elementos del array
-    // regresar el mimo array pero sin el array encontrado
     console.log(recipe);
     const newFavourites = addFavourite.filter((recipeItem) => {
       return(
@@ -52,6 +60,7 @@ function Home() {
       )
     })
     setAddFavourite(newFavourites)
+    saveToLocalStorage(newFavourites)
   }
 
   return (
