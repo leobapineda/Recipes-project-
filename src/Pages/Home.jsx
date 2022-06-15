@@ -76,12 +76,6 @@ function Home() {
         data={recipeData}
         AddFavouriteBtn={AddFavouritesTest}
       />
-      <HeaderTest headingText="Favourites" />
-      <RecipeList
-        addFavouriteRecipe={removeFavouriteFunc}
-        data={addFavourite}
-        AddFavouriteBtn={RemoveFavouritesTest}
-      />
     </>
   );
 }

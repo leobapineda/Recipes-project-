@@ -1,25 +1,38 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import RecipesList from "../components/RecipesList";
 import RemoveFavouritesTest from "../components/RemoveFavouritesTest";
 
-function Favorites({ obj }) {
-  const [addFavourite, setAddFavourite] = useState([]);
+function Favorites() {
+  const [favouriteList, setFavouriteList] = useState();
 
-  function addFavouriteFunc(recipe) {
-    console.log('lol');
-    setAddFavourite((prevAddFavouriteFunc) => [
-      ...prevAddFavouriteFunc,
-      recipe,
-    ]);
+  useEffect(() => {
+    const movieFavourites = JSON.parse(
+      localStorage.getItem("react-recipe-favourites")
+    );
+    setFavouriteList(movieFavourites);
+  }, []);
+
+  function removeFavouriteFunc(recipeItem) {
+    const newFavourites = favouriteList.filter(
+      (item) => item.recipe.label !== recipeItem.recipe.label
+    );
+    setFavouriteList(newFavourites);
+    saveToLocalStorage(newFavourites);
+  }
+
+  function saveToLocalStorage(newFavourites) {
+    localStorage.setItem(
+      "react-recipe-favourites",
+      JSON.stringify(newFavourites)
+    );
   }
 
   return (
     <>
-      <RecipesList 
-      data={obj} 
-      AddFavouriteBtn={RemoveFavouritesTest} 
-      addFavouriteRecipe={addFavouriteFunc}
-      
+      <RecipesList
+        addFavouriteRecipe={removeFavouriteFunc}
+        data={favouriteList}
+        AddFavouriteBtn={RemoveFavouritesTest}
       />
     </>
   );
