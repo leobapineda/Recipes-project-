@@ -1,24 +1,24 @@
 .favourite__container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: red;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: red;
 }
 
 .favourite__text {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
-.favourite__icon{
-    width: 25px;
-    margin: 0.5em;
+.favourite__icon {
+  width: 25px;
+  margin: 0.5em;
 }
 
-.favourite__container:hover{
-    color: var(--red1);
-    font-weight: bold;
+.favourite__container:hover {
+  color: var(--red1);
+  font-weight: bold;
 }

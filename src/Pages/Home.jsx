@@ -39,7 +39,7 @@ function Home() {
       recipe,
     ]);
   }
-  
+
   return (
     <>
       <HeaderTest headingText="Linguini" />
@@ -59,9 +59,7 @@ function Home() {
         data={addFavourite}
         AddFavouriteBtn={AddFavouritesTest}
       /> */}
-      <Favorites
-      obj = {addFavourite}
-      />
+      <Favorites obj={addFavourite} />
     </>
   );
 }
