@@ -12,7 +12,7 @@ export default function RecipesList({
     <div className="recipes-global__container">
       {data?.map((item) => {
         return (
-          <article key={item.recipe.image} className="recipe__container">
+          <article onClick={() => console.log({item})} key={item.recipe.image} className="recipe__container">
             <img src={item.recipe.image} alt="recipe img" />
             <div className="recipe__text-container">
               <div className="recipe__text-one">

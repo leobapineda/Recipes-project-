@@ -1,15 +1,11 @@
 import {React, useState, useEffect} from "react";
 import "../stylesheet/Navbar.css";
 import { Link } from "react-router-dom";
-import logo from '../images/logo5.png'
+import logo from '../images/logo7.png'
 
 
 
 export default function Header() {
-
-  // const [favoritesItems, setFavoritesItems] = useState(null)
-
-  
 
   const [local, setLocal] = useState([])
 
