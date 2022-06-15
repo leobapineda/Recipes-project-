@@ -1,8 +1,12 @@
 import { React, useEffect, useState } from "react";
 import "../stylesheet/RecipesList.css";
 
-export default function Recipe({ data, AddFavourites }) {
-  const AddFavouritesComponent = AddFavourites;
+export default function RecipesList({
+  data,
+  AddFavouriteBtn,
+  addFavouriteRecipe,
+}) {
+  const AddFavouritesComponent = AddFavouriteBtn;
 
   return (
     <div className="recipes-global__container">
@@ -22,7 +26,9 @@ export default function Recipe({ data, AddFavourites }) {
               <span className="recipe__cuisine-type">
                 {item.recipe.cuisineType[0]}
               </span>
-              <AddFavouritesComponent />
+              <span onClick={() => addFavouriteRecipe(item)}>
+                <AddFavouritesComponent />
+              </span>
             </div>
           </article>
         );

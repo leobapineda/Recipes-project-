@@ -4,10 +4,13 @@ import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
 import HeaderTest from "../components/HeaderTest";
 import AddFavouritesTest from "./AddFavouritesTest";
+import Favorites from "./Favorites";
 
 function Home() {
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
+
+  const [addFavourite, setAddFavourite] = useState([]);
 
   const [food, setFood] = useState("");
   const [recipeData, setRecipeData] = useState(null);
@@ -17,6 +20,7 @@ function Home() {
   useEffect(() => {
     axios.get(`${url3}`).then((APIdata) => {
       setRecipeData(APIdata.data.hits);
+      console.log(APIdata.data.hits);
     });
   }, [submit]);
 
@@ -28,6 +32,14 @@ function Home() {
     e.preventDefault();
     setSubmit(food);
   }
+
+  function addFavouriteFunc(recipe) {
+    setAddFavourite((prevAddFavouriteFunc) => [
+      ...prevAddFavouriteFunc,
+      recipe,
+    ]);
+  }
+  
   return (
     <>
       <HeaderTest headingText="Linguini" />
@@ -36,7 +48,20 @@ function Home() {
         handleChange={handleChange}
         food={food}
       />
-      <RecipeList data={recipeData} AddFavourites={AddFavouritesTest} />
+      <RecipeList
+        addFavouriteRecipe={addFavouriteFunc}
+        data={recipeData}
+        AddFavouriteBtn={AddFavouritesTest}
+      />
+      <HeaderTest headingText="Favourites" />
+      {/* <RecipeList
+        addFavouriteRecipe={addFavouriteFunc}
+        data={addFavourite}
+        AddFavouriteBtn={AddFavouritesTest}
+      /> */}
+      <Favorites
+      obj = {addFavourite}
+      />
     </>
   );
 }
