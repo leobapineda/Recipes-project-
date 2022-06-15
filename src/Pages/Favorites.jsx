@@ -1,19 +1,26 @@
 import { React, useState } from "react";
-import { Link } from "react-router-dom";
 import RecipesList from "../components/RecipesList";
-import AddFavouritesTest from "./AddFavouritesTest";
+import RemoveFavouritesTest from "../components/RemoveFavouritesTest";
 
 function Favorites({ obj }) {
-  console.log(obj);
+  const [addFavourite, setAddFavourite] = useState([]);
+
+  function addFavouriteFunc(recipe) {
+    console.log('lol');
+    setAddFavourite((prevAddFavouriteFunc) => [
+      ...prevAddFavouriteFunc,
+      recipe,
+    ]);
+  }
 
   return (
     <>
-      <h1>
-        Favorites
-        <Link to="/"> go home</Link>
-      </h1>
-
-      <RecipesList data={obj} AddFavouriteBtn={AddFavouritesTest} />
+      <RecipesList 
+      data={obj} 
+      AddFavouriteBtn={RemoveFavouritesTest} 
+      addFavouriteRecipe={addFavouriteFunc}
+      
+      />
     </>
   );
 }

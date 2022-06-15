@@ -3,8 +3,9 @@ import axios from "axios";
 import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
 import HeaderTest from "../components/HeaderTest";
-import AddFavouritesTest from "./AddFavouritesTest";
+import AddFavouritesTest from "../components/AddFavouritesTest";
 import Favorites from "./Favorites";
+import RemoveFavouritesTest from "../components/RemoveFavouritesTest";
 
 function Home() {
   const YOUR_APP_ID = "1225815e";
@@ -39,6 +40,19 @@ function Home() {
       recipe,
     ]);
   }
+  // const [addFavourite, setAddFavourite] = useState([]);
+
+  function removeFavouriteFunc(recipe) {
+    // pasar por todos los elementos del array
+    // regresar el mimo array pero sin el array encontrado
+    console.log(recipe);
+    const newFavourites = addFavourite.filter((recipeItem) => {
+      return(
+        recipeItem.recipe.label != recipe.recipe.label
+      )
+    })
+    setAddFavourite(newFavourites)
+  }
 
   return (
     <>
@@ -54,12 +68,11 @@ function Home() {
         AddFavouriteBtn={AddFavouritesTest}
       />
       <HeaderTest headingText="Favourites" />
-      {/* <RecipeList
-        addFavouriteRecipe={addFavouriteFunc}
+      <RecipeList
+        addFavouriteRecipe={removeFavouriteFunc}
         data={addFavourite}
-        AddFavouriteBtn={AddFavouritesTest}
-      /> */}
-      <Favorites obj={addFavourite} />
+        AddFavouriteBtn={RemoveFavouritesTest}
+      />
     </>
   );
 }
