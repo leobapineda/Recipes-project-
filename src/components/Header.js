@@ -1,6 +1,8 @@
 import {React, useState, useEffect} from "react";
 import "../stylesheet/Navbar.css";
 import { Link } from "react-router-dom";
+import logo from '../images/logo5.png'
+
 
 
 export default function Header() {
@@ -32,7 +34,9 @@ export default function Header() {
           <hr />
         </li>
         <li>
-          <Link className="nav__logo" to="/">linguini</Link>
+          <Link className="nav__logo" to="/">
+            <img src={logo} />
+            linguini</Link>
         </li>
         <li>
           <Link className="nav__favorites" to="favorites">Favorites  </Link>

@@ -1,15 +1,15 @@
 nav{
    background-color: black;
    color: white;
+   padding: 0rem 1rem;
 }
 
 .nav__ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
     margin: 0;
-    margin-bottom: 1rem;
+    padding: 0;
 }
 
 
@@ -25,9 +25,15 @@ hr {
 
 .nav__logo{
     font-family: 'Tai Heritage Pro', serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     text-decoration: none;
+    /* background-color: red; */
+}
+
+.nav__logo img{
+    width: 25px;
+    position: relative;
 }
 
 .nav__favorites {
