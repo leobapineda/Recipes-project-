@@ -35,7 +35,7 @@ export default function Header() {
             linguini</Link>
         </li>
         <li>
-          <Link className="nav__favorites" to="favorites">Favorites  </Link>
+          <Link className="nav__favorites" to="favorites">Favorites</Link>
         </li>
       </ul>
     </nav>

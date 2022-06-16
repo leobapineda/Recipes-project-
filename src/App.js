@@ -14,8 +14,9 @@ export default function App() {
    <BrowserRouter>
    <Header />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="favorites" element={<Favorites />}/>
+        <Route path="/" element={<Home />}>
+          <Route path="favorites" element={<Favorites />}/>
+        </Route>
       </Routes>
     </BrowserRouter>
     </>

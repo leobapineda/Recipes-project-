@@ -3,6 +3,8 @@ import axios from "axios";
 import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
 import AddFavouritesTest from "../components/AddFavouritesTest";
+import { Outlet } from "react-router-dom";
+
 
 
 function Home() {
@@ -62,7 +64,6 @@ function Home() {
 
   return (
     <>
-      {/* <HeaderTest headingText="Linguini" /> */}
       <SearchBar
         hanbleSubmit={hanbleSubmit}
         handleChange={handleChange}
@@ -73,6 +74,7 @@ function Home() {
         data={recipeData}
         AddFavouriteBtn={AddFavouritesTest}
       />
+      <Outlet/>
     </>
   );
 }
