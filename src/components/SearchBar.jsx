@@ -5,7 +5,6 @@ import lupa from "../images/icons/lupa.svg";
 function SearchBar({ hanbleSubmit, handleChange, food }) {
   return (
     <form className="searh__container" onSubmit={hanbleSubmit}>
-      {/* <label id="food">Choose food</label> */}
       <button className="search__btn">
         <img src={lupa} />
       </button>

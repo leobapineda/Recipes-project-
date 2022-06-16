@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import RecipesList from "../components/RecipesList";
-import RemoveFavouritesTest from "../components/RemoveFavouritesTest";
+import RemoveFavourites from "../components/RemoveFavourites";
 import Quote from "../components/Quote";
 
 function Favorites() {
@@ -36,7 +36,7 @@ function Favorites() {
       <RecipesList
         addFavouriteRecipe={removeFavouriteFunc}
         data={favouriteList}
-        AddFavouriteBtn={RemoveFavouritesTest}
+        AddFavouriteBtn={RemoveFavourites}
       />
     </>
   );

@@ -2,7 +2,7 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
-import AddFavouritesTest from "../components/AddFavouritesTest";
+import AddFavourites from "../components/AddFavourites";
 import { Outlet } from "react-router-dom";
 
 function Home() {
@@ -63,7 +63,7 @@ function Home() {
       <RecipeList
         addFavouriteRecipe={addFavouriteFunc}
         data={recipeData}
-        AddFavouriteBtn={AddFavouritesTest}
+        AddFavouriteBtn={AddFavourites}
       />
       <Outlet />
     </>
