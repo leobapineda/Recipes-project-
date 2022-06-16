@@ -44,4 +44,14 @@ hr {
   letter-spacing: 2px;
   font-weight: 600;
   font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.nav__favorites:hover{
+  color: var(--red1);
+}
+
+
+.nav__favorites.active{
+  color: var(--red1);
 }

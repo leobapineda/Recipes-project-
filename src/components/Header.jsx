@@ -1,8 +1,7 @@
 import {React, useState, useEffect} from "react";
 import "../stylesheet/Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../images/logo7.png'
-
 
 
 export default function Header() {
@@ -33,7 +32,11 @@ export default function Header() {
             linguini</Link>
         </li>
         <li>
-          <Link className="nav__favorites" to="/favorites">Favorites</Link>
+          <NavLink
+            className={({isActive}) => (isActive ? ' nav__favorites active' : 'nav__favorites')}
+          // className="nav__favorites" 
+          to="/favorites"
+          >Favorites</NavLink>
         </li>
       </ul>
     </nav>
