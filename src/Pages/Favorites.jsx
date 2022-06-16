@@ -5,7 +5,7 @@ import Quote from "../components/Quote";
 
 function Favorites() {
   const [favouriteList, setFavouriteList] = useState();
-  console.log('i am favourites');
+  console.log("i am favourites");
   useEffect(() => {
     const movieFavourites = JSON.parse(
       localStorage.getItem("react-recipe-favourites")
@@ -28,12 +28,11 @@ function Favorites() {
     );
   }
 
-
   return (
     <>
-    <Quote 
-    text={`${" 'Humans don't just survive, they discover, they create... I mean, just look at what they do with food! – Remy "}`} 
-    />
+      <Quote
+        text={`${" 'Humans don't just survive, they discover, they create... I mean, just look at what they do with food! – Remy "}`}
+      />
       <RecipesList
         addFavouriteRecipe={removeFavouriteFunc}
         data={favouriteList}

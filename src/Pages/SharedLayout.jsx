@@ -1,12 +1,12 @@
 import { React } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 function SharedLayout() {
     console.log('i am haredlayout');
   return (
     <>
-      <Header />
+      <Navbar />
       <Outlet />
     </>
   );
