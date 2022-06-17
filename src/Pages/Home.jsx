@@ -4,6 +4,8 @@ import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
 import AddFavourites from "../components/AddFavourites";
 import { Outlet } from "react-router-dom";
+import Logo from "../images/logo8.png"
+import "../stylesheet/Home.css"
 
 function Home() {
   const YOUR_APP_ID = "1225815e";
@@ -63,8 +65,6 @@ function Home() {
     );
   }
 
-  console.log(recipeData);
-  console.log(recipeData?.length);
   return (
     <>
       <SearchBar
@@ -73,7 +73,9 @@ function Home() {
         food={food}
       />
       {(recipeData?.length == 0)  &&
-        <h1>no hay recetas</h1>
+        <div className="page-logo__container" >
+          <img className="page-logo" src={Logo} alt="page logo" />
+        </div>
       }
       {recipeData?.length !== 0 &&
       <RecipeList
