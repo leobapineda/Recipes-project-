@@ -3,12 +3,9 @@ import { useParams, Link, useLocation } from 'react-router-dom'
 // necesitamos la informaicon de todas las busquedas
 
 function SingleRecipe() {
-    console.log(useParams());
-    // const {recipeName} = useParams()
+    
     const { state } = useLocation();
-
     console.log(state);
-
     const {label, image, source, shareAs} = state
   return (
     <div>

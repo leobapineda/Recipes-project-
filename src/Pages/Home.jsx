@@ -9,19 +9,18 @@ function Home() {
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
   
-  const [food, setFood] = useState('');
-  // const [food, setFood] = useState(null);
+  // const [food, setFood] = useState('');
+  const [food, setFood] = useState(null);
   const [recipeData, setRecipeData] = useState(null);
   const [submit, setSubmit] = useState("");
   const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&diet=balanced&random=false`;
   const [addFavourite, setAddFavourite] = useState([]);
-
   useEffect(() => {
     axios.get(`${url}`).then((APIdata) => {
       setRecipeData(APIdata.data.hits);
     });
   }, [submit]);
-
+  
 
   function handleChange(e) {
     setFood(e.target.value);
@@ -64,6 +63,8 @@ function Home() {
     );
   }
 
+  console.log(recipeData);
+  console.log(recipeData?.length);
   return (
     <>
       <SearchBar
@@ -71,11 +72,17 @@ function Home() {
         handleChange={handleChange}
         food={food}
       />
+      {(recipeData?.length == 0)  &&
+        <h1>no hay recetas</h1>
+      }
+      {recipeData?.length !== 0 &&
       <RecipeList
-        addFavouriteRecipe={addFavouriteFunc}
-        data={recipeData}
-        AddFavouriteBtn={AddFavourites}
-      />
+      addFavouriteRecipe={addFavouriteFunc}
+      data={recipeData}
+      AddFavouriteBtn={AddFavourites}
+    />
+      }
+      
       <Outlet />
     </>
   );
