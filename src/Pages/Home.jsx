@@ -9,14 +9,15 @@ function Home() {
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
   
-  const [food, setFood] = useState("");
+  const [food, setFood] = useState('');
+  // const [food, setFood] = useState(null);
   const [recipeData, setRecipeData] = useState(null);
   const [submit, setSubmit] = useState("");
-  const url3 = `https://api.edamam.com/api/recipes/v2?type=public&q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&diet=balanced&random=false`;
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&diet=balanced&random=false`;
   const [addFavourite, setAddFavourite] = useState([]);
 
   useEffect(() => {
-    axios.get(`${url3}`).then((APIdata) => {
+    axios.get(`${url}`).then((APIdata) => {
       setRecipeData(APIdata.data.hits);
     });
   }, [submit]);

@@ -13,24 +13,35 @@ export default function RecipesList({
     <div className="recipes-global__container">
       {data?.map((item) => {
         return (
-          <article
-            key={item.recipe.image}
-            className="recipe__container"
-          >
+          <article key={item.recipe.image} className="recipe__container">
             <Link
               key={item.recipe.image}
               to={`/${item.recipe.label}`}
               className="recipe__Link"
               state={item.recipe}
             >
-              <img src={item.recipe.image} alt="recipe img" />
+              <img src={item.recipe.image} alt={item.recipe.label} />
               <div className="recipe__text-container">
                 {/* Ver receta completa</Link> */}
                 <div className="recipe__text-one">
                   <div className="recipe__meal-type">
                     {item.recipe.mealType[0]}
                   </div>
-                  <h4 className="recipe__tittle">{item.recipe.label}</h4>
+                  <h4 className="recipe__tittle">
+                    {item.recipe.label.length < 20
+                      ? `${item.recipe.label}`
+                      : `${item.recipe.label.substring(0, 20)}...`}
+
+                    {/* {item.recipe.label.split(' ')
+                      .filter(function(n) { return n != '' })
+                      .length} */}
+
+                    
+
+                    {/* {item.recipe.label.length } */}
+
+                    {/* {item.recipe.label} */}
+                  </h4>
                 </div>
               </div>
             </Link>
