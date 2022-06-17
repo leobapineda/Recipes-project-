@@ -8,21 +8,19 @@ import { Outlet } from "react-router-dom";
 function Home() {
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
-  console.log("i am Home");
-
-  const [addFavourite, setAddFavourite] = useState([]);
-
+  
   const [food, setFood] = useState("");
   const [recipeData, setRecipeData] = useState(null);
   const [submit, setSubmit] = useState("");
   const url3 = `https://api.edamam.com/api/recipes/v2?type=public&q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&diet=balanced&random=false`;
+  const [addFavourite, setAddFavourite] = useState([]);
 
   useEffect(() => {
     axios.get(`${url3}`).then((APIdata) => {
       setRecipeData(APIdata.data.hits);
     });
-    console.log("api call");
   }, [submit]);
+
 
   function handleChange(e) {
     setFood(e.target.value);
@@ -32,11 +30,23 @@ function Home() {
     e.preventDefault();
     setSubmit(food);
   }
-
+  
   function addFavouriteFunc(recipe) {
-    const newFavourites = [...addFavourite, recipe];
-    setAddFavourite(newFavourites);
-    saveToLocalStorage(newFavourites);
+   
+    // condicion que relaicone a la primera iteracion, la segunda vez ya no es indefinid
+   if(addFavourite === null) {
+      let newFavourites = [recipe];
+      setAddFavourite(newFavourites);
+      saveToLocalStorage(newFavourites);
+      console.log('i am addFavourite null');
+   } 
+   else {
+    let newFavourites = [...addFavourite, recipe];
+      setAddFavourite(newFavourites);
+      saveToLocalStorage(newFavourites);
+      console.log('i am addFavourite');
+   }
+
   }
 
   useEffect(() => {
