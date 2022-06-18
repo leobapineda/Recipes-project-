@@ -5,7 +5,7 @@ import { useParams, Link, useLocation } from 'react-router-dom'
 function SingleRecipe() {
     
     const { state } = useLocation();
-    console.log(state);
+    
     const {label, image, source, shareAs} = state
   return (
     <div>
