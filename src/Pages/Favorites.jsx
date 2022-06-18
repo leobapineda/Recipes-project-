@@ -5,7 +5,6 @@ import Quote from "../components/Quote";
 
 function Favorites() {
   const [favouriteList, setFavouriteList] = useState();
-  console.log("i am favourites");
   useEffect(() => {
     const movieFavourites = JSON.parse(
       localStorage.getItem("react-recipe-favourites")
