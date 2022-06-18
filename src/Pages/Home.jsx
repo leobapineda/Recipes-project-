@@ -24,15 +24,15 @@ function Home() {
 
   useEffect(() => {
     axios.get(`${url}`).then((APIdata) => {
-      if(APIdata.data.hits.length == 0) {
+      if(APIdata.data.hits.length > 0) {
 
-        setRecipeData(JSON.parse(localStorage.getItem("localItem")))
+        setRecipeData(APIdata.data.hits)
         
-      }
-
+      } 
+      
       else {
-        setRecipeData(APIdata.data.hits || JSON.parse(localStorage.getItem("localItem")))
-
+        
+        setRecipeData(JSON.parse(localStorage.getItem("localItem")))
       }
 
     });
