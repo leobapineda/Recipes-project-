@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 // necesitamos la informaicon de todas las busquedas
 
 function SingleRecipe() {
-    
+  console.log("i am SingleRecipe 3");
   const { state } = useLocation();
     const {label, image, source, shareAs} = state.recipeItem
     console.log("i am state");
