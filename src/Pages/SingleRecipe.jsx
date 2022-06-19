@@ -1,16 +1,16 @@
 import {React} from 'react'
-import { useParams, Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 // necesitamos la informaicon de todas las busquedas
 
 function SingleRecipe() {
     
   const { state } = useLocation();
+    const {label, image, source, shareAs} = state.recipeItem
+    console.log("i am state");
   console.log(state);
-  
-    console.log("i am singlerecipe");
-    console.log(state);
-    const {label, image, source, shareAs} = state
-  
+    console.log("i am state.recipeItem");
+    console.log(state.recipeItem);
   return (
     <div>
       <h1>single recipe</h1>

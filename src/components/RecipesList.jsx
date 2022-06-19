@@ -18,8 +18,8 @@ export default function RecipesList({
               key={item.recipe.image}
               to={`/${item?.recipe?.label}`}
               className="recipe__Link"
-              state={item.recipe}
               obj = {item.recipe}
+              state={{recipeItem: item.recipe}}
             >
               <img src={item.recipe.image} alt={item.recipe.label} />
               <div className="recipe__text-container">
