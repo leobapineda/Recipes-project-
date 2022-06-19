@@ -10,10 +10,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route path="https://leobapineda.github.io/linguini-recipes/" element={<SharedLayout />}>
           <Route index element={<Home  />} />
-          <Route path="/:recipeName" element={<SingleRecipe />}  />
-          <Route path="/favorites" element={<Favorites />} />
+          <Route path="https://leobapineda.github.io/linguini-recipes/:recipeName" element={<SingleRecipe />}  />
+          <Route path="https://leobapineda.github.io/linguini-recipes/favorites" element={<Favorites />} />
         </Route>
       </Routes>
     </BrowserRouter>
