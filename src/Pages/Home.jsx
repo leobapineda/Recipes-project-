@@ -8,6 +8,8 @@ import Logo from "../images/logo8.png";
 import "../stylesheet/Home.css";
 
 function Home() {
+  console.log("i am Home");
+
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
 
