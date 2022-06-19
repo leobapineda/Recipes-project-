@@ -18,7 +18,7 @@ function SingleRecipe() {
       <img style={{width: "150px"}} src={image} />
       <a  target="_blank"  href={shareAs} >View full recipe</a>
       <p>Shared by {source}</p>
-      <Link to='https://leobapineda.github.io/linguini-recipes/' >Back to home</Link>
+      <Link to='/' >Back to home</Link>
     </div>
   )
 }
