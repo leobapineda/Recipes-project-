@@ -30,7 +30,7 @@ function SingleRecipe() {
     //   <img style={{width: "150px"}} src={image} />
     //   <a  target="_blank"  href={shareAs} >View full recipe</a>
     //   <p>Shared by {source}</p>
-    //   <Link to='/' >Back to home</Link> */}
+    //   <Link to= "linguini-recipes/" >Back to home</Link> */}
     {`this is the recipe label using useParams():`}
       <h1>{recipeName}</h1>
     </div>

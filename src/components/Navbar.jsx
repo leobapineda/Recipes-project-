@@ -15,7 +15,7 @@ export default function Header() {
             <hr />
           </li>
           <li>
-            <Link className="nav__logo" to="/">
+            <Link className="nav__logo" to="linguini-recipes/">
               <img src={logo} />
               linguini
             </Link>
@@ -25,7 +25,7 @@ export default function Header() {
               className={({ isActive }) =>
                 isActive ? " nav__favorites active" : "nav__favorites"
               }
-              to="/favorites"
+              to="linguini-recipes/favorites"
             >
               Favorites
             </NavLink>
