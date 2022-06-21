@@ -7,14 +7,14 @@ import SingleRecipe from "./Pages/SingleRecipe";
 import "./App.css";
 
 export default function App() {
-  console.log("i am App 5");
+  console.log("i am App 6");
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route path="https://leobapineda.github.io/linguini-recipes" element={<SharedLayout />}>
           <Route index element={<Home  />} />
-          <Route path="/:recipeName" element={<SingleRecipe />}  />
-          <Route path="/favorites" element={<Favorites />} />
+          <Route path="https://leobapineda.github.io/linguini-recipes/:recipeName" element={<SingleRecipe />}  />
+          <Route path="https://leobapineda.github.io/linguini-recipes/favorites" element={<Favorites />} />
         </Route>
       </Routes>
     </BrowserRouter>

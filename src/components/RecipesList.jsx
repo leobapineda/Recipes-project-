@@ -8,7 +8,7 @@ export default function RecipesList({
   addFavouriteRecipe,
 }) {
   const AddFavouritesComponent = AddFavouriteBtn;
-  console.log("i am RecipesList 4");
+  console.log("i am RecipesList 6");
   return (
     <div className="recipes-global__container">
       {data?.map((item) => {

@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 function SingleRecipe() {
   // console.log("i am SingleRecipe 4");
   // const { state } = useLocation();
-  console.log("i am SingleRecipe 5");
+  console.log("i am SingleRecipe 6");
   const { recipeName } = useParams();
   const local = localStorage.getItem("localItem")
   const localJson = JSON.parse(local)
