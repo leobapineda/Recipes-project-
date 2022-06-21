@@ -14,7 +14,7 @@ export default function App() {
       <Routes>
         <Route path="linguini-recipes/" element={<SharedLayout />}>
           <Route index element={<Home  />} />
-          <Route path=":favorites" element={<SingleRecipe />}  />
+          <Route path=":recipeName" element={<SingleRecipe />}  />
           <Route path="favorites" element={<Favorites />} />
           <Route path="*" element={<Error />} />
         </Route>
