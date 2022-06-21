@@ -4,7 +4,7 @@ import RemoveFavourites from "../components/RemoveFavourites";
 import Quote from "../components/Quote";
 
 function Favorites() {
-  console.log("i am Favorites 3");
+  console.log("i am Favorites 5");
   const [favouriteList, setFavouriteList] = useState();
   useEffect(() => {
     const movieFavourites = JSON.parse(
