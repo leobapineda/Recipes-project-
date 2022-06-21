@@ -15,7 +15,7 @@ export default function Header() {
             <hr />
           </li>
           <li>
-            <Link className="nav__logo" to="linguini-recipes/">
+            <Link className="nav__logo" to="linguini-recipes">
               <img src={logo} />
               linguini
             </Link>
