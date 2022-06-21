@@ -11,7 +11,7 @@ function SingleRecipe() {
   const { recipeName } = useParams();
   const local = localStorage.getItem("localItem")
   const localJson = JSON.parse(local)
-  const single = localJson.find((recipe) => {
+  const single = localJson?.find((recipe) => {
     return(recipe.recipe.label == recipeName)
   })
 
