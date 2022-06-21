@@ -8,7 +8,7 @@ import Logo from "../images/logo8.png";
 import "../stylesheet/Home.css";
 
 function Home() {
-  console.log("i am Home 3");
+  console.log("i am Home 4");
 
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
@@ -26,17 +26,11 @@ function Home() {
 
   useEffect(() => {
     axios.get(`${url}`).then((APIdata) => {
-      if(APIdata.data.hits.length > 0) {
-
-        setRecipeData(APIdata.data.hits)
-        
-      } 
-      
-      else {
-        
-        setRecipeData(JSON.parse(localStorage.getItem("localItem")))
+      if (APIdata.data.hits.length > 0) {
+        setRecipeData(APIdata.data.hits);
+      } else {
+        setRecipeData(JSON.parse(localStorage.getItem("localItem")));
       }
-
     });
   }, [submit]);
 
