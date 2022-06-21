@@ -8,14 +8,14 @@ import SingleRecipe from "./Pages/SingleRecipe";
 import "./App.css";
 
 export default function App() {
-  console.log("i am App 9");
+  console.log("i am App 10");
   return (
     <BrowserRouter>
       <Routes>
         <Route path="linguini-recipes/" element={<SharedLayout />}>
           <Route index element={<Home  />} />
-          <Route path="/:recipeName" element={<SingleRecipe />}  />
-          <Route path="/favorites" element={<Favorites />} />
+          <Route path=":recipeName" element={<SingleRecipe />}  />
+          <Route path="favorites" element={<Favorites />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
