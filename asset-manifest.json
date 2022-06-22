@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/linguini-recipes/static/css/main.56166989.css",
-    "main.js": "/linguini-recipes/static/js/main.1129aac3.js",
+    "main.js": "/linguini-recipes/static/js/main.eb654ac8.js",
     "static/media/logo8.png": "/linguini-recipes/static/media/logo8.50412de80e3672abc18f.png",
     "static/media/logo7.png": "/linguini-recipes/static/media/logo7.50f39edd6375b9b32d23.png",
     "index.html": "/linguini-recipes/index.html",
@@ -9,10 +9,10 @@
     "static/media/heart-solid.svg": "/linguini-recipes/static/media/heart-solid.b33513c270ea2f5cd57b8b054bc31267.svg",
     "static/media/remove.svg": "/linguini-recipes/static/media/remove.887d22e887ea2b3884d34fdecf4a6a4b.svg",
     "main.56166989.css.map": "/linguini-recipes/static/css/main.56166989.css.map",
-    "main.1129aac3.js.map": "/linguini-recipes/static/js/main.1129aac3.js.map"
+    "main.eb654ac8.js.map": "/linguini-recipes/static/js/main.eb654ac8.js.map"
   },
   "entrypoints": [
     "static/css/main.56166989.css",
-    "static/js/main.1129aac3.js"
+    "static/js/main.eb654ac8.js"
   ]
 }
