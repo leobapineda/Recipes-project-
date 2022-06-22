@@ -1,4 +1,5 @@
 import { React } from "react";
+import { HashRouter } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
@@ -8,9 +9,19 @@ import SingleRecipe from "./Pages/SingleRecipe";
 import "./App.css";
 
 export default function App() {
-  console.log("i am App 23");
+  console.log("i am App 24");
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/linguini-recipes" element={<SharedLayout />}>
+    //       <Route index element={<Home />} />
+    //       <Route path="/linguini-recipes/:recipeName" element={<SingleRecipe />} />
+    //       <Route path="/linguini-recipes/favorites" element={<Favorites />} />
+    //       <Route path="*" element={<Error />} />
+    //     </Route>
+    //   </Routes>
+    // </BrowserRouter>
+    <HashRouter >
       <Routes>
         <Route path="/linguini-recipes" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -19,6 +30,6 @@ export default function App() {
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
