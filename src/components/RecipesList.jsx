@@ -17,6 +17,7 @@ export default function RecipesList({
             <Link
               key={item.recipe.image}
               to={`/linguini-recipes/${item?.recipe?.label}`}
+              // to={`/${item?.recipe?.label}`}
               className="recipe__Link"
               obj = {item.recipe}
               state={{recipeItem: item.recipe}}
