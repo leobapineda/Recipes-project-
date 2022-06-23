@@ -1,0 +1,26 @@
+.table {
+   border: 1px solid black;
+   width: 60%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.thead {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+.tr{
+    /* border: 1px solid black; */
+}
+
+.td {
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.td1 {
+    /* border: 1px solid black; */
+    text-transform: uppercase;
+}
