@@ -2,6 +2,7 @@ import { React } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "../stylesheet/SingleRecipe.css";
+import RecipeIngridients from "../components/RecipeIngridients";
 function SingleRecipe() {
   const { state } = useLocation();
   const { label, image, source, shareAs } = state.recipeItem;
@@ -34,7 +35,9 @@ function SingleRecipe() {
         src={image} alt={`${label} img`}/>
       </div>
     </div>
-    
+    <RecipeIngridients 
+    recipeData = {state.recipeItem}
+    />
     </>
     
   );
