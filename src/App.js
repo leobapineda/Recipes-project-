@@ -9,7 +9,7 @@ import SingleRecipe from "./Pages/SingleRecipe";
 import "./App.css";
 
 export default function App() {
-  console.log("i am App 25");
+  console.log("i am App 26");
   return (
     // <BrowserRouter>
     //   <Routes>
