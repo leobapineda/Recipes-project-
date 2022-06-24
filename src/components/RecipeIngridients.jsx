@@ -5,36 +5,18 @@ function RecipeIngridients({ recipeData }) {
   const { ingredients } = recipeData;
   console.log(ingredients);
   return (
-    <div>
-      <h1>Ingredients</h1>
+    <div className="ingredients__container" >
+      <h1 className="ingredients__tittle" >Ingredients</h1>
 
-      {/* {ingredients.map((element) => {
-        return (
-          <div>
-
-          </div>
-        );
-      })} */}
-      <table className="table"
-      cellSpacing="0"
-      >
-        <thead className="thead" >
-          <th>Ingredients</th>
-          <th>quantity</th>
-          <th>measure</th>
-        </thead>
         {ingredients.map((element, index) => {
           return (
-            <>
-            <tr className="tr"  key={index} >
-              <td className="td1" >{element.food}</td>
-              <td className="td" >{element.quantity}</td>
-              <td className="td" >{element.measure}</td>
-            </tr>
-            </>
+            <div className="ingredients__ingredients" key={index}  >
+                  <span className="ingredients__quantity"  >{`${ element.quantity} `}</span>
+                  {element.measure && <span className="ingredients__measure"  >{`${ element.measure == "<unit>" ? "" : element.measure} `}</span>} 
+                  <span className="ingredients__food" >{element.food}</span>
+            </div>
           );
         })}
-      </table>
     </div>
   );
 }

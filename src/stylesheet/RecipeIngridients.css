@@ -1,26 +1,29 @@
-.table {
-   border: 1px solid black;
-   width: 60%;
-    font-family: 'Poppins', sans-serif;
+.ingredients__container {
+    margin-left: 10%;
+    max-width: 60%;
+    min-width: 250px;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 4px 1px #8f8f8f98;
+    padding: 1rem;
 }
 
-.thead {
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    
+.ingredients__tittle {
+    border-bottom: 1px solid var(--yellow);
+    margin: 0;
 }
 
-.tr{
-    /* border: 1px solid black; */
+.ingredients__food {
+    text-transform: capitalize;
+    color: black;
 }
 
-.td {
-    text-align: center;
-    /* border: 1px solid black; */
+.ingredients__ingredients{
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.td1 {
-    /* border: 1px solid black; */
-    text-transform: uppercase;
-}
+/* .ingredients__quantity, 
+.ingredients__measure {
+  color: #545454;
+} */
