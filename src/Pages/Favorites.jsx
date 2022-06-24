@@ -1,10 +1,9 @@
 import { React, useState, useEffect } from "react";
 import RecipesList from "../components/RecipesList";
 import RemoveFavourites from "../components/RemoveFavourites";
-import Quote from "../components/Quote";
 
 function Favorites() {
-  console.log("i am Favorites 27");
+  
   const [favouriteList, setFavouriteList] = useState();
   useEffect(() => {
     const movieFavourites = JSON.parse(
@@ -30,9 +29,6 @@ function Favorites() {
 
   return (
     <>
-      <Quote
-        text={`${" 'Humans don't just survive, they discover, they create... I mean, just look at what they do with food! – Remy "}`}
-      />
       <RecipesList
         addFavouriteRecipe={removeFavouriteFunc}
         data={favouriteList}

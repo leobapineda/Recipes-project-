@@ -62,7 +62,6 @@
   bottom: 5px;
 }
 
-
 @media (max-width: 768px) {
   :root {
     --recipe-width: 230px;
@@ -72,5 +71,14 @@
 @media (max-width: 576px) {
   :root {
     --recipe-width: 270px;
+  }
+  .recipe__tittle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  :root {
+    --recipe-width: 200px;
   }
 }

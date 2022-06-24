@@ -19,5 +19,4 @@
 
 .favourite__container:hover {
   color: var(--red);
-  font-weight: bold;
 }

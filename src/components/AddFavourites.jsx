@@ -1,6 +1,6 @@
 import React from "react";
 import heart from "../images/heart-solid.svg";
-import "../stylesheet/AddFavouritesTest.css";
+import "../stylesheet/Favourites.css";
 
 function AddFavouritesTest() {
   return (

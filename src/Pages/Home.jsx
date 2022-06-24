@@ -4,7 +4,7 @@ import RecipeList from "../components/RecipesList";
 import SearchBar from "../components/SearchBar";
 import AddFavourites from "../components/AddFavourites";
 import { Outlet } from "react-router-dom";
-import Logo from "../images/logo8.png";
+import Logo from "../images/bg-logo.png";
 import "../stylesheet/Home.css";
 
 function Home() {
@@ -13,11 +13,8 @@ function Home() {
   const YOUR_APP_ID = "1225815e";
   const YOUR_APP_KEY = "e642963f4d2299d6ac085245011970ab";
 
-  // const [food, setFood] = useState('');
   const [food, setFood] = useState(null);
   const [recipeData, setRecipeData] = useState(
-    // null
-    // ""
     JSON.parse(localStorage.getItem("localItem"))
   );
   const [submit, setSubmit] = useState("");
@@ -83,7 +80,7 @@ function Home() {
         handleChange={handleChange}
         food={food}
       />
-      {recipeData?.length == 0 && (
+      {(recipeData?.length == 0 || recipeData == null) && (
         <div className="page-logo__container">
           <img className="page-logo" src={Logo} alt="page logo" />
           <h1 className="page__no-recipe">no recipes</h1>

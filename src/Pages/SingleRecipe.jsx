@@ -28,7 +28,7 @@ function SingleRecipe() {
         </a>
         <h3 className="singleRecipe_servings">
           {" "}
-          <span>4</span> servings
+          <span>{state.recipeItem.yield}</span> servings
         </h3>
         <Link className="singleRecipe_Link singleRecipe_btn" to="/">
           Back to home
