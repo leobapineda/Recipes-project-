@@ -21,9 +21,6 @@
 .ingredients__ingredients{
     padding: 0.5rem 0;
     border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
 }
-
-/* .ingredients__quantity, 
-.ingredients__measure {
-  color: #545454;
-} */

@@ -6,7 +6,7 @@ import RecipeIngridients from "../components/RecipeIngridients";
 function SingleRecipe() {
   const { state } = useLocation();
   const { label, image, source, shareAs } = state.recipeItem;
- console.log(state.recipeItem);
+//  console.log(state.recipeItem);
   return (
     <>
     <div className="singleRecipe_main-container">
