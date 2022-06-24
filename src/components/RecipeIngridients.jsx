@@ -3,6 +3,8 @@ import "../stylesheet/RecipeIngridients.css";
 
 function RecipeIngridients({ recipeData }) {
   const { ingredients } = recipeData;
+  console.log("i am RecipeIngridients 27");
+
   console.log(recipeData);
   return (
     <div className="ingredients__container" >

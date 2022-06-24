@@ -9,7 +9,7 @@ import "./App.css";
 import Error from "./Pages/Error"
 
 export default function App() {
-  // console.log("i am App 26");
+  console.log("i am App 27");
   return (
     <HashRouter>
       <Routes>

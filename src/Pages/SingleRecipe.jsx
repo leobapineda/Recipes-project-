@@ -5,8 +5,12 @@ import "../stylesheet/SingleRecipe.css";
 import RecipeIngridients from "../components/RecipeIngridients";
 function SingleRecipe() {
   const { state } = useLocation();
+  console.log("i am state");
+  console.log(state);
   const { label, image, source, shareAs } = state.recipeItem;
-//  console.log(state.recipeItem);
+  console.log("i am state.recipeItem using useLocation()");
+ console.log(state.recipeItem);
+
   return (
     <>
     <div className="singleRecipe_main-container">
