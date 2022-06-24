@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+.error{
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 90vh;
+    text-align: center;
+}
+
+.error__404{
+    color: var(--red);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.error__text{
+    position: relative;
+    color: black;
+    line-height: 2rem;
+    bottom: 50%;
+}
+
+.error__Link {
+    color: var(--red);
+    font-size: 1.5rem;
+}
