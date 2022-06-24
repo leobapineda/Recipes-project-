@@ -1,22 +1,17 @@
 import React from "react";
 import "../stylesheet/Navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../images/logo7.png";
+import logo from "../images/logo-navbar.png";
+import heart from "../images/heart-solid.svg";
 
 export default function Header() {
-
   return (
     <>
       <nav>
         <ul className="nav__ul">
-          <li className="nav__hamburguer">
-            <hr />
-            <hr />
-            <hr />
-          </li>
           <li>
             <Link className="nav__logo" to="/">
-              <img src={logo} />
+              <img src={logo} alt={logo} />
               linguini
             </Link>
           </li>
@@ -28,6 +23,16 @@ export default function Header() {
               to="/favorites"
             >
               Favorites
+              <img
+                src={heart}
+                alt={heart}
+                style={{
+                  width: "15px",
+                  position: "relative",
+                  bottom: "-3px",
+                  marginLeft: "5px",
+                }}
+              />
             </NavLink>
           </li>
         </ul>

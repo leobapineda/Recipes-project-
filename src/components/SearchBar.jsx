@@ -6,7 +6,7 @@ function SearchBar({ hanbleSubmit, handleChange, food }) {
   return (
     <form className="searh__container" onSubmit={hanbleSubmit}>
       <button className="search__btn">
-        <img src={lupa} />
+        <img src={lupa} alt={lupa} />
       </button>
       <input
         type="text"

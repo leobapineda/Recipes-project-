@@ -1,7 +1,5 @@
 :root {
   --bnt-width: 10px;
-  --yellow: #fec445;
-  --red: #fe2c55;
 }
 
 .searh__container {
@@ -25,22 +23,34 @@
 }
 
 .search__btn img {
-  width: 15px;
+  width: 14px;
   position: relative;
   bottom: -2px;
 }
 
 .search__input {
-  border: 1px solid black;
+  border: 1px solid #707070;
   outline: none;
-  padding-left: calc(4 * var(--bnt-width));
+  padding-left: 40px;
   width: 50%;
   transition: border 0.3s ease;
   font-size: 0.9rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family-Poppins);
   font-weight: 500;
 }
 
 .search__input:focus {
-  border: 1px solid #e4a110;
+  border: 1px solid var(--yellow-dark);
+}
+
+@media (max-width: 768px) {
+  .search__input {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .search__input {
+    width: 90%;
+  }
 }

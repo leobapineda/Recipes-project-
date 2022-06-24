@@ -11,6 +11,12 @@
 .ingredients__tittle {
     border-bottom: 1px solid var(--yellow);
     margin: 0;
+    display: inline-block;
+}
+
+.ingredients__length{
+    display: inline-block;
+    margin-left: 1rem;
 }
 
 .ingredients__food {

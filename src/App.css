@@ -1,9 +1,17 @@
 :root{
-    --red1:#fe2c55;
+    --red:#fe2c55;
     --yellow: #fec445;
+    --yellow-dark: #e4a110;
+    --font-family-Poppins: "Poppins", sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
 
+/* Extra small
+<576px	Small
+≥576px	Medium
+≥768px	Large
+≥992px	Extra large
+≥1200px */
